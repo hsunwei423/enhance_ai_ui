@@ -1,13 +1,17 @@
-import { Route, BrowserRouter } from "react-router-dom";
-// import {} from 'react-router';
-import Home from "../pages/Home";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
-export default function Router() {
+import Header from "../components/Header";
+import Home from "../pages/Home";
+import NoMatch from "../pages/NoMatch";
+
+export default function App() {
   return (
-    <BrowserRouter>
-      <Route path="/">
-        <Home />
-      </Route>
-    </BrowserRouter>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
+    </Router>
   );
 }
