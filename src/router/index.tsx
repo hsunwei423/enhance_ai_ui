@@ -1,16 +1,19 @@
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
-import Header from "../components/Header";
-import Home from "../pages/Home";
-import NoMatch from "../pages/NoMatch";
+import Header from "components/Header";
+
+import { ROUTE_LIST } from "consts";
 
 export default function App() {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NoMatch />} />
+        {/* <Route path="/" element={<Home />} />
+        <Route path="*" element={<NoMatch />} /> */}
+        {ROUTE_LIST.map((d) => (
+          <Route key={d.name} path={d.path} element={<d.component />} />
+        ))}
       </Routes>
     </Router>
   );
