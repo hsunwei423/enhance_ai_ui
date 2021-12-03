@@ -22,6 +22,14 @@ export default function Header() {
             <Link to={d.path}>{d.name}</Link>
           </li>
         ))}
+        <li key="signup">
+          <Link to="/signup">
+            <div className="bg-gradient-to-r from-purple-600 to-purple-800 h-12 w-40 rounded-2xl flex items-center justify-center gap-x-2">
+              <img src={SignupImg} alt="signup" />
+              <span className="font-bold text-white">Free Signup</span>
+            </div>
+          </Link>
+        </li>
       </ul>
     );
   };
@@ -38,10 +46,6 @@ export default function Header() {
 
         <div className="flex items-center justify-between">
           <nav>{renderLinkList()}</nav>
-          <div className="bg-gradient-to-r from-purple-600 to-purple-800 h-12 w-40 rounded-2xl flex items-center justify-center gap-x-2">
-            <img src={SignupImg} alt="signup" />
-            <span className="font-bold text-white">Free Signup</span>
-          </div>
         </div>
       </header>
     </div>
