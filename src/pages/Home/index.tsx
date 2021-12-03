@@ -1,7 +1,31 @@
 import ExplainImg from "assets/imgs/explain.svg";
 import LaunchImg from "assets/imgs/launch.svg";
+import ArrowImg from "assets/imgs/arrow.svg";
+import ArrowGrayImg from "assets/imgs/arrow-bg-grey.svg";
+
+const CODE_CONTENT = [
+  "The code above is a function definition.",
+  "It defines a new function called `HelloWorld` that takes a single argument called `text`",
+  "The body of the function is a single line of code that prints out the value of `text` if it is defined, or `Hello World` if it is not defined.",
+];
 
 export default function Home() {
+  const renderCodeContent = () => {
+    const len = CODE_CONTENT.length;
+    const list = CODE_CONTENT.map((d, index) => (
+      <div
+        className={`flex items-start gap-x-2 py-4 ${
+          index - 1 !== len && "border-b"
+        }`}
+        key={d}
+      >
+        <img src={ArrowGrayImg} alt="" />
+        <span>{d}</span>
+      </div>
+    ));
+    return list;
+  };
+
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="font-normal text-7xl leading-tight bg-gradient-to-r from-green-300 to-purple-700 bg-clip-text text-transparent text-center mt-10">
@@ -47,7 +71,16 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="flex-1 p-9 border-l"></div>
+          <div className="flex-1 p-9 border-l">
+            <div className="flex items-center gap-x-4">
+              <img src={ArrowImg} alt="" />
+              <span className="text-2xl font-normal">
+                What does this code do?
+              </span>
+            </div>
+            <div className="mt-2 text-gray-500">The following code does:</div>
+            <div className="mt-7">{renderCodeContent()}</div>
+          </div>
         </div>
       </div>
     </div>
