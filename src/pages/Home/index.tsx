@@ -1,4 +1,5 @@
 import ExplainImg from "assets/imgs/explain.svg";
+import LaunchImg from "assets/imgs/launch.svg";
 
 export default function Home() {
   return (
@@ -15,15 +16,38 @@ export default function Home() {
         Get Started
       </button>
 
-      <div className="container rounded-3xl shadow-md">
+      <div className="rounded-3xl shadow-md mt-12 max-w-5xl w-full">
         <div className="flex items-stretch">
-          <div className="p-9">
+          <div className="flex-1 p-9">
             <div className="flex items-center gap-x-3">
               <img src={ExplainImg} alt="explain" />
               <span className="text-4xl font-normal">Explain Code</span>
             </div>
+            <div className="font-normal text-lg text-gray-500 mt-4">
+              Explain some code based on the syntax provided
+            </div>
+            <div className="font-medium text-xl mt-10">
+              Paste your code below:
+            </div>
+            <div className="rounded-lg p-6 h-44 bg-pink-100 mt-3">
+              <span className="text-blue-700">function </span>
+              <span className="text-red-500">HelloWorld</span>
+              <span>{`(text) {`}</span>
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <span>echo text || </span>
+              <span className="text-green-500">"Hello World"</span>
+              <span>;</span>
+              <br />
+              <span>{`}`}</span>
+            </div>
+            <button className="h-13 w-56 flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-800 text-white rounded-xl mt-8 p-3 gap-x-2">
+              <img src={LaunchImg} alt="alunch" />
+              <span>Enhance with AI</span>
+            </button>
           </div>
-          <div></div>
+
+          <div className="flex-1 p-9 border-l"></div>
         </div>
       </div>
     </div>
