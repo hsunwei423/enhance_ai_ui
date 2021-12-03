@@ -1,3 +1,5 @@
+import ExplainImg from "assets/imgs/explain.svg";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center">
@@ -12,6 +14,18 @@ export default function Home() {
       <button className="h-16 w-64 bg-gradient-to-r from-green-300 to-blue-700 rounded-2xl text-2xl font-medium text-white mt-3">
         Get Started
       </button>
+
+      <div className="container rounded-3xl shadow-md">
+        <div className="flex items-stretch">
+          <div className="p-9">
+            <div className="flex items-center gap-x-3">
+              <img src={ExplainImg} alt="explain" />
+              <span className="text-4xl font-normal">Explain Code</span>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 }
