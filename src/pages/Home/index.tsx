@@ -1,5 +1,6 @@
 import ExplainImg from "assets/imgs/explain.svg";
 import LaunchImg from "assets/imgs/launch.svg";
+import LaunchGrayImg from "assets/imgs/launch-grey.svg";
 import ArrowImg from "assets/imgs/arrow.svg";
 import ArrowGrayImg from "assets/imgs/arrow-bg-grey.svg";
 
@@ -66,7 +67,7 @@ export default function Home() {
               <span>{`}`}</span>
             </div>
             <button className="h-13 w-56 flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-800 text-white rounded-xl mt-8 p-3 gap-x-2">
-              <img src={LaunchImg} alt="alunch" />
+              <img src={LaunchImg} alt="launch" />
               <span>Enhance with AI</span>
             </button>
           </div>
@@ -80,6 +81,10 @@ export default function Home() {
             </div>
             <div className="mt-2 text-gray-500">The following code does:</div>
             <div className="mt-7">{renderCodeContent()}</div>
+            <button className="rounded-2xl h-10 bg-gray-100 flex items-center gap-x-4 px-6 py-4 mt-12 text-gray-500">
+              <img src={LaunchGrayImg} alt="copy output" />
+              <span>Copy Output</span>
+            </button>
           </div>
         </div>
       </div>
