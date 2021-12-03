@@ -131,6 +131,14 @@ export default function Home() {
             Free Signup
           </span>
         </button>
+
+        <h2 className="font-normal text-7xl leading-tight bg-gradient-to-r from-green-300 to-yellow-400 bg-clip-text text-transparent text-center mt-20">
+          Use the latest AI features
+        </h2>
+        <p className="text-center text-white text-2xl font-normal">
+          Start enhancing a range of tasks using AI, from writing emails, code,
+          or <br /> blogs, to rephrasing paragraph’s you just want to reword!
+        </p>
       </section>
     </div>
   );
