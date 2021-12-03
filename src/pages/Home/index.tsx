@@ -7,6 +7,7 @@ import ArrowImg from "assets/imgs/arrow.svg";
 import ArrowGrayImg from "assets/imgs/arrow-bg-grey.svg";
 import OpenAiImg from "assets/imgs/openAI.png";
 import CircleImg from "assets/imgs/circle.svg";
+import PeopleImg from "assets/imgs/people.svg";
 
 import { BUTTON_LIST } from "consts/home";
 
@@ -102,8 +103,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full bg-gradient-to-r from-purple-600 to-blue-800">
-        <div className="flex items-center justify-center gap-3 mt-24">
+      <section className="w-full bg-gradient-to-r from-purple-600 to-blue-800 flex flex-col items-center">
+        <div className="flex items-center justify-center gap-3 mt-24 flex-wrap">
           {BUTTON_LIST.map((d, index) => (
             <button
               key={d.name}
@@ -123,6 +124,13 @@ export default function Home() {
           ))}
           <img src={OpenAiImg} alt="Open AI" className="object-contain" />
         </div>
+
+        <button className="flex items-center gap-x-3 px-10 py-4 bg-white rounded-2xl mt-10">
+          <img src={PeopleImg} alt="" className="object-contain" />
+          <span className="text-purple-900 font-medium text-2xl">
+            Free Signup
+          </span>
+        </button>
       </section>
     </div>
   );
