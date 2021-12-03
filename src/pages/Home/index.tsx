@@ -5,6 +5,8 @@ import LaunchImg from "assets/imgs/launch.svg";
 import LaunchGrayImg from "assets/imgs/launch-grey.svg";
 import ArrowImg from "assets/imgs/arrow.svg";
 import ArrowGrayImg from "assets/imgs/arrow-bg-grey.svg";
+import OpenAiImg from "assets/imgs/openAI.png";
+import CircleImg from "assets/imgs/circle.svg";
 
 import { BUTTON_LIST } from "consts/home";
 
@@ -46,8 +48,14 @@ export default function Home() {
         Get Started
       </button>
 
-      <section className="rounded-3xl shadow-md mt-12 max-w-5xl w-full">
-        <div className="flex items-stretch">
+      <section className="w-full relative flex justify-center">
+        <img
+          src={CircleImg}
+          alt=""
+          className="absolute bottom-0 left-0 transform translate-y-44 object-cover"
+          width="180px"
+        />
+        <div className="max-w-5xl flex bg-white rounded-3xl shadow-md transform translate-y-20">
           <div className="flex-1 p-9">
             <div className="flex items-center gap-x-3">
               <img src={ExplainImg} alt="explain" />
@@ -95,13 +103,14 @@ export default function Home() {
       </section>
 
       <section className="w-full bg-gradient-to-r from-purple-600 to-blue-800">
-        <div className="flex items-center justify-center gap-3 mt-4">
+        <div className="flex items-center justify-center gap-3 mt-24">
           {BUTTON_LIST.map((d, index) => (
             <button
               key={d.name}
               className={`flex items-center gap-x-4 px-4 py-3 rounded-2xl ${
                 index === selectedBtn ? "bg-white" : "bg-purple-400"
               }`}
+              onClick={() => setSelectedBtn(index)}
             >
               <img
                 src={d.icon}
@@ -112,6 +121,7 @@ export default function Home() {
               <span>{d.name}</span>
             </button>
           ))}
+          <img src={OpenAiImg} alt="Open AI" className="object-contain" />
         </div>
       </section>
     </div>
