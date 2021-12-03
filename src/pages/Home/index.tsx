@@ -1,8 +1,12 @@
+import { useState } from "react";
+
 import ExplainImg from "assets/imgs/explain.svg";
 import LaunchImg from "assets/imgs/launch.svg";
 import LaunchGrayImg from "assets/imgs/launch-grey.svg";
 import ArrowImg from "assets/imgs/arrow.svg";
 import ArrowGrayImg from "assets/imgs/arrow-bg-grey.svg";
+
+import { BUTTON_LIST } from "consts/home";
 
 const CODE_CONTENT = [
   "The code above is a function definition.",
@@ -11,6 +15,7 @@ const CODE_CONTENT = [
 ];
 
 export default function Home() {
+  const [selectedBtn, setSelectedBtn] = useState(0);
   const renderCodeContent = () => {
     const len = CODE_CONTENT.length;
     const list = CODE_CONTENT.map((d, index) => (
@@ -41,7 +46,7 @@ export default function Home() {
         Get Started
       </button>
 
-      <div className="rounded-3xl shadow-md mt-12 max-w-5xl w-full">
+      <section className="rounded-3xl shadow-md mt-12 max-w-5xl w-full">
         <div className="flex items-stretch">
           <div className="flex-1 p-9">
             <div className="flex items-center gap-x-3">
@@ -87,7 +92,28 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="w-full bg-gradient-to-r from-purple-600 to-blue-800">
+        <div className="flex items-center justify-center gap-3 mt-4">
+          {BUTTON_LIST.map((d, index) => (
+            <button
+              key={d.name}
+              className={`flex items-center gap-x-4 px-4 py-3 rounded-2xl ${
+                index === selectedBtn ? "bg-white" : "bg-purple-400"
+              }`}
+            >
+              <img
+                src={d.icon}
+                alt={d.name}
+                className="object-contain"
+                width="18px"
+              />
+              <span>{d.name}</span>
+            </button>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
