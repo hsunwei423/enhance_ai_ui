@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import FeatureItem from "components/FeatureItem";
+
 import ExplainImg from "assets/imgs/explain.svg";
 import LaunchImg from "assets/imgs/launch.svg";
 import LaunchGrayImg from "assets/imgs/launch-grey.svg";
@@ -10,6 +12,7 @@ import CircleImg from "assets/imgs/circle.svg";
 import PeopleImg from "assets/imgs/people.svg";
 
 import { BUTTON_LIST } from "consts/home";
+import { FEATURE_CONTENT_LIST } from "consts";
 
 const CODE_CONTENT = [
   "The code above is a function definition.",
@@ -139,6 +142,17 @@ export default function Home() {
           Start enhancing a range of tasks using AI, from writing emails, code,
           or <br /> blogs, to rephrasing paragraph’s you just want to reword!
         </p>
+
+        <div className="grid grid-cols-2 gap-12 mt-18">
+          {FEATURE_CONTENT_LIST.map((d, index) => (
+            <FeatureItem
+              key={index}
+              title={d.title}
+              mainTitle={d.mainTitle}
+              description={d.description}
+            />
+          ))}
+        </div>
       </section>
     </div>
   );

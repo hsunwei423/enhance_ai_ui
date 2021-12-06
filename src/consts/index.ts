@@ -33,3 +33,36 @@ export const ROUTE_LIST = [
     component: NoMatch,
   },
 ];
+
+export const FEATURE_CONTENT_LIST = [
+  {
+    title: "Content",
+    mainTitle: "Explain Code",
+    description: "Explain some code based on the syntax provided",
+  },
+  {
+    title: "Content",
+    mainTitle: "Explain Code",
+    description: "Explain some code based on the syntax provided",
+  },
+  {
+    title: "Content",
+    mainTitle: "Explain Code",
+    description: "Explain some code based on the syntax provided",
+  },
+  {
+    title: "Content",
+    mainTitle: "Explain Code",
+    description: "Explain some code based on the syntax provided",
+  },
+  {
+    title: "Content",
+    mainTitle: "Explain Code",
+    description: "Explain some code based on the syntax provided",
+  },
+  {
+    title: "Content",
+    mainTitle: "Explain Code",
+    description: "Explain some code based on the syntax provided",
+  },
+];
