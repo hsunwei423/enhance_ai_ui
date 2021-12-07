@@ -143,7 +143,7 @@ export default function Home() {
           or <br /> blogs, to rephrasing paragraph’s you just want to reword!
         </p>
 
-        <div className="grid grid-cols-2 gap-12 mt-18">
+        <div className="grid grid-cols-2 gap-12 mt-16">
           {FEATURE_CONTENT_LIST.map((d, index) => (
             <FeatureItem
               key={index}
