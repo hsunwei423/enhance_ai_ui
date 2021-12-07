@@ -4,7 +4,7 @@ import Header from "components/Header";
 
 import { ROUTE_LIST } from "consts";
 
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <Router>
       <Header />

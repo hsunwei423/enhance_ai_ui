@@ -5,7 +5,7 @@ import SignupImg from "assets/imgs/signup.png";
 
 import { ROUTE_LIST } from "consts";
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const location = useLocation();
 
   const renderLinkList = () => {

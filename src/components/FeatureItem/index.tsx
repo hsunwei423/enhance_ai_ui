@@ -8,7 +8,7 @@ export default function FeatureItem({
   title: string;
   mainTitle: string;
   description: string;
-}) {
+}): JSX.Element {
   return (
     <div
       className="flex items-center gap-x-8 bg-white rounded-lg py-3 px-12"

@@ -20,7 +20,7 @@ const CODE_CONTENT = [
   "The body of the function is a single line of code that prints out the value of `text` if it is defined, or `Hello World` if it is not defined.",
 ];
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const [selectedBtn, setSelectedBtn] = useState(0);
   const renderCodeContent = () => {
     const len = CODE_CONTENT.length;
