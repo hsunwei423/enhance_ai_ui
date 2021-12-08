@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/enhance_ai_ui/static/css/main.7c2573cc.chunk.css",
+    "main.css": "/enhance_ai_ui/static/css/main.13ab0edc.chunk.css",
     "main.js": "/enhance_ai_ui/static/js/main.3394e3dc.chunk.js",
     "main.js.map": "/enhance_ai_ui/static/js/main.3394e3dc.chunk.js.map",
     "runtime-main.js": "/enhance_ai_ui/static/js/runtime-main.caedfcf7.js",
@@ -10,7 +10,7 @@
     "static/js/3.7aeb98d1.chunk.js": "/enhance_ai_ui/static/js/3.7aeb98d1.chunk.js",
     "static/js/3.7aeb98d1.chunk.js.map": "/enhance_ai_ui/static/js/3.7aeb98d1.chunk.js.map",
     "index.html": "/enhance_ai_ui/index.html",
-    "static/css/main.7c2573cc.chunk.css.map": "/enhance_ai_ui/static/css/main.7c2573cc.chunk.css.map",
+    "static/css/main.13ab0edc.chunk.css.map": "/enhance_ai_ui/static/css/main.13ab0edc.chunk.css.map",
     "static/js/2.ee8bcef2.chunk.js.LICENSE.txt": "/enhance_ai_ui/static/js/2.ee8bcef2.chunk.js.LICENSE.txt",
     "static/media/arrow-bg-grey.2989260b.svg": "/enhance_ai_ui/static/media/arrow-bg-grey.2989260b.svg",
     "static/media/arrow.027e61c2.svg": "/enhance_ai_ui/static/media/arrow.027e61c2.svg",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.caedfcf7.js",
     "static/js/2.ee8bcef2.chunk.js",
-    "static/css/main.7c2573cc.chunk.css",
+    "static/css/main.13ab0edc.chunk.css",
     "static/js/main.3394e3dc.chunk.js"
   ]
 }
