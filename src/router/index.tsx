@@ -6,7 +6,7 @@ import { ROUTE_LIST } from "consts";
 
 export default function App(): JSX.Element {
   return (
-    <Router>
+    <Router basename={process.env.REACT_APP_BASE_PATH}>
       <Header />
       <Routes>
         {/* <Route path="/" element={<Home />} />

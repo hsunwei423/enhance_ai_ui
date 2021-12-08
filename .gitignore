@@ -1,2 +1,7 @@
 node_modules
 build
+
+public/__ENV.js
+
+.env
+.env.gh-pages

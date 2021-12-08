@@ -21,12 +21,12 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev": "craco start",
+    "dev": "react-env --path .env -- craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
     "predeploy": "craco build",
-    "deploy": "gh-pages -d build"
+    "deploy": "react-env --path .env.gh-pages -- gh-pages -d build gh-pages"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@beam-australia/react-env": "^3.1.1",
     "autoprefixer": "^9",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
