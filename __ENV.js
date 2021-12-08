@@ -1,0 +1,1 @@
+window.__ENV = {"REACT_APP_BASE_PATH":""};
