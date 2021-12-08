@@ -25,8 +25,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "predeploy": "craco build",
-    "deploy": "react-env --path .env.gh-pages -- gh-pages -d build gh-pages"
+    "predeploy": "react-env --path .env.gh-pages -- craco build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
